@@ -13,3 +13,26 @@
   position: fixed;
   z-index: 2;
 }
+
+.app__navbar-logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  // with scss we can have nested properies. Instead of repeating the entire class to target the image we can simply target the img inside the app__navbar-logo
+  // The structure in the jsx is actually like that: thee is an img tag inside a div with a classname of app__navbar-logo
+
+  img {
+    width: 40px;
+    height: 30px;
+
+    // we can keep nesting with scss and also add media queries for specific elements, like in this case with img tag.
+    // media queries are used to target specific screen sizes.
+
+    // This is for extra large devices
+    @media screen and (min-width: 2000px) {
+      width: 80px;
+      height: 60px;
+    }
+  }
+}
