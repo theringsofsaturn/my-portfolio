@@ -23,7 +23,7 @@ import about02 from '../assets/about02.png';
 import about03 from '../assets/about03.png';
 import about04 from '../assets/about04.png';
 
-import profile from '../assets/me2.jpg';
+import profile from '../assets/no_bg_me.png';
 import circle from '../assets/circle.svg';
 import logo from '../assets/owl-black.png';
 
