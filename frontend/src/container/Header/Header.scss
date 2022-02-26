@@ -21,7 +21,7 @@
   height: 100%;
   flex-direction: row;
 
-  padding: 6rem 2rem 0rem;
+  padding: 0rem 2rem 0rem;
 
   @media screen and (min-width: 2000px) {
     padding-top: 8rem;
@@ -77,7 +77,7 @@
     p {
       width: 100%;
       text-transform: uppercase;
-      text-align: right;
+      text-align: center;
     }
   }
 
@@ -121,26 +121,29 @@
   // circles with different height & width
 
   div:nth-child(1) {
+    margin: 60px;
     width: 220px;
     height: 220px;
   }
 
   div:nth-child(2) {
-    margin: 1.75rem;
+  
     width: 190px;
     height: 190px;
   }
 
   div:nth-child(3) {
+    margin: 60px;
     width: 160px;
     height: 160px;
   }
   div:nth-child(4) {
-    margin: 1.75rem;
+   
     width: 150px;
     height: 150px;
   }
   div:nth-child(5) {
+    margin: 60px;
     width: 200px;
     height: 200px;
   }

@@ -20,7 +20,7 @@ const Header = () => {
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
         transition={{ duration: 0.5 }}
-        className="app_header-info"
+        className="app__header-info"
       >
         <div className="app__header-badge">
           <div className="badge-cmp app__flex">
@@ -33,7 +33,8 @@ const Header = () => {
 
           <div className="tag-cmp app__flex">
             <p className="p-text">Full Stack Developer</p>
-            {/* <p className="p-text">Game Developer</p> */}
+            <p className="p-text">and</p>
+            <p className="p-text">Game Designer</p>
           </div>
         </div>
       </motion.div>
@@ -59,7 +60,7 @@ const Header = () => {
         className="app__header-circles"
       >
         {/* The circles animations behind main photo */}
-        {[images.javascript, images.react1, images.nodejs, images.express, images.mongo].map((circle, index) => (
+        {[images.react1, images.nodejs, images.express, images.mongo].map((circle, index) => (
           <div className="circle-cmp app__flex" key={`circle-${index}`}>
             <img src={circle} alt="circle" />
           </div>
