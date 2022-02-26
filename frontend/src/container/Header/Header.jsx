@@ -16,7 +16,7 @@ const scaleVariants = {
 
 const Header = () => {
   return (
-    <div id="home" className="app__header app__flex">
+    <div className="app__header app__flex">
       {/* Special div from framer-motion. check /www.framer.com */}
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
