@@ -83,4 +83,10 @@
       }
     }
   }
+
+  // media query for the links of the navbar. We want to collapse them when the screen is smaller than 900px.
+  // So, for devices higher than 900px display none.
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
 }
