@@ -59,7 +59,7 @@ const Header = () => {
         className="app_header-circles"
       >
         {/* The circles animations behind main photo */}
-        {[images.flutter, images.redux, images.sass].map((circle, index) => (
+        {[images.javascript, images.react1, images.nodejs, images.express, images.mongo].map((circle, index) => (
           <div className="circle-cmp app__flex" key={`circle-${index}`}>
             <img src={circle} alt="circle" />
           </div>

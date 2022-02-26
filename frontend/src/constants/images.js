@@ -17,6 +17,11 @@ import redux from '../assets/redux.png';
 import sass from '../assets/sass.png';
 import typescript from '../assets/typescript.png';
 import vue from '../assets/vue.png';
+import unity from '../assets/unity.png';
+import react1 from '../assets/react1.png';
+import mongo from '../assets/mongo.png';
+import nodejs from '../assets/node_js.png';
+import express from '../assets/express.png';
 
 import about01 from '../assets/about01.png';
 import about02 from '../assets/about02.png';
@@ -69,4 +74,9 @@ export default {
   nb,
   skype,
   spotify,
+  unity,
+  react1,
+  mongo,
+  nodejs,
+  express
 };
