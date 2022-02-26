@@ -4,13 +4,16 @@ import { FaFacebookF, FaGoodreads } from "react-icons/fa";
 const SocialMedia = () => (
   <div className="app__social">
     <div>
-      <BsTwitter />
+      <BsInstagram />
     </div>
     <div>
       <FaFacebookF />
     </div>
     <div>
-      <BsInstagram />
+      <BsYoutube />
+    </div>
+    <div>
+      <FaGoodreads />
     </div>
   </div>
 );
