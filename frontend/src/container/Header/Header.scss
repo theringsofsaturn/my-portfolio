@@ -121,8 +121,8 @@
     // circles with different height & width
   
     div:nth-child(1) {
-      width: 100px;
-      height: 100px;
+      width: 150px;
+      height: 150px;
     }
   
     div:nth-child(2) {
@@ -132,8 +132,18 @@
     }
   
     div:nth-child(3) {
-      width: 70px;
-      height: 70px;
+        margin: 1.75rem;
+      width: 150px;
+      height: 150px;
+    }
+    div:nth-child(4) {
+        margin: 1.75rem;
+      width: 150px;
+      height: 150px;
+    }
+    div:nth-child(5) {
+      width: 150px;
+      height: 150px;
     }
   
     @media screen and (min-width: 2000px) {

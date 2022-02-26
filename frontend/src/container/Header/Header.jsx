@@ -15,7 +15,7 @@ const scaleVariants = {
 
 const Header = () => {
   return (
-    <div className="app__header app__flex">
+    <div id="home" className="app__header app__flex">
       {/* Special div from framer-motion. check /www.framer.com */}
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
@@ -33,7 +33,7 @@ const Header = () => {
 
           <div className="tag-cmp app__flex">
             <p className="p-text">Full Stack Developer</p>
-            <p className="p-text">Game Developer</p>
+            {/* <p className="p-text">Game Developer</p> */}
           </div>
         </div>
       </motion.div>
@@ -56,7 +56,7 @@ const Header = () => {
       <motion.div
         variants={scaleVariants}
         whileInView={scaleVariants.whileInView}
-        className="app_header-circles"
+        className="app__header-circles"
       >
         {/* The circles animations behind main photo */}
         {[images.javascript, images.react1, images.nodejs, images.express, images.mongo].map((circle, index) => (
