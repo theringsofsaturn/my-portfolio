@@ -7,11 +7,11 @@
 
   padding: 1rem 2rem; // top & bottom - left & right
   background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px); // blur the background
   -webkit-backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.18);
   position: fixed;
-  z-index: 2;
+  z-index: 2; // above the other elements
 }
 
 .app__navbar-logo {
@@ -33,6 +33,54 @@
     @media screen and (min-width: 2000px) {
       width: 80px;
       height: 60px;
+    }
+  }
+}
+
+.app__navbar-links {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none; // removes the default list styling
+
+  // Targeting the individual items inside the navbar links
+  li {
+    margin: 0 1rem;
+    cursor: pointer;
+    flex-direction: column;
+
+    // Inside this li there's a div and inside there's an anchor tag (which iterates each item/links). We can specifically target that.
+    div {
+      // This div is the small DOT appearing when hovering over the links
+      width: 5px;
+      height: 5px;
+      background: transparent;
+      border-radius: 50%; // rounded corners
+    }
+
+    a {
+      // using the variable we defined inside the index.css file in the :root selector.
+      color: var(--gray-color);
+      text-decoration: none; // removes the underline from the links
+      text-transform: uppercase;
+      font-weight: 500; // bolder font
+      transition: all 0.3s ease-in-out; // transition effect for all elements when we hover over them
+      // Instead writing a new class and target a:hover , we can directly target like this with the & sign. Which means we are refering to the element we are inside of. So, the hover is refering to the ancor tag right here.
+      &:hover {
+        color: var(
+          --secondary-color
+        ); // the color "slowly" transitions (0.3s) to the secondary color when we hover
+      }
+
+      flex-direction: column;
+    }
+    // this hover targets the li above and the div inside it.
+    // It will appear a small DOT when we hover. The DOT is the div above inside this "li" (with 5px and border radius 50% --> commented above)
+    &:hover {
+      div {
+        background: var(--secondary-color);
+      }
     }
   }
 }
