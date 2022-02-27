@@ -34,7 +34,7 @@ const Header = () => {
 
           <div className="tag-cmp app__flex">
             <p className="p-text">Full Stack Developer</p>
-            <p className="p-text">and</p>
+            {/* <p className="p-text">and</p> */}
             <p className="p-text">Game Designer</p>
           </div>
         </div>
@@ -61,7 +61,7 @@ const Header = () => {
         className="app__header-circles"
       >
         {/* The circles animations behind main photo */}
-        {[images.react1, images.nodejs, images.express, images.mongo].map((circle, index) => (
+        {[images.nodejs, images.react1, images.express, images.mongo].map((circle, index) => (
           <div className="circle-cmp app__flex" key={`circle-${index}`}>
             <img src={circle} alt="circle" />
           </div>

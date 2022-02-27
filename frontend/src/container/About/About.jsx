@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-
-// import { AppWrap, MotionWrap } from "../../wrapper";
-import "./About.scss";
+import { AppWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
+import "./About.scss";
 
 const About = () => {
   const [abouts, setAbouts] = useState([]);
@@ -19,7 +18,8 @@ const About = () => {
   return (
     <>
       <h2 className="head-text">
-        Creating <span>Code & Art</span> <br /> for the always evolving <span>web</span>
+        Creating <span>Code & Art</span> <br /> for the always{" "}
+        <span>evolving web</span>
       </h2>
 
       <div className="app__profiles">
@@ -45,10 +45,4 @@ const About = () => {
   );
 };
 
-export default About
-
-// export default AppWrap(
-//   MotionWrap(About, "app__about"),
-//   "about",
-//   "app__whitebg"
-// );
+export default AppWrap(About, "about");
