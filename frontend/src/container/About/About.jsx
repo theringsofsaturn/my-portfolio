@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { AppWrap,  MotionWrap } from "../../wrapper";
+import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
 import "./About.scss";
 
@@ -8,7 +8,7 @@ const About = () => {
   const [abouts, setAbouts] = useState([]);
 
   useEffect(() => {
-    const query = '*[_type == "abouts"]';
+    const query = '*[_type == "abouts"] | order(_createdAt asc)';
 
     client.fetch(query).then((data) => {
       setAbouts(data);
@@ -27,7 +27,7 @@ const About = () => {
           <motion.div
             whileInView={{ opacity: 1 }}
             whileHover={{ scale: 1.1 }}
-            transition={{ duration: 0.5, type: "tween" }}
+            transition={{ duration: 0.25, type: "tween" }}
             className="app__profile-item"
             key={about.title + index}
           >
@@ -46,7 +46,7 @@ const About = () => {
 };
 
 export default AppWrap(
-  MotionWrap(About, 'app__about'),
-  'about',
-  'app__whitebg',
+  MotionWrap(About, "app__about"),
+  "about",
+  "app__whitebg"
 );

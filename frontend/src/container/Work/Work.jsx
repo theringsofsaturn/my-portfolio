@@ -12,11 +12,12 @@ const Work = () => {
   const [filterWork, setFilterWork] = useState([]);
 
   useEffect(() => {
-    const query = '*[_type == "works"]';
+    const query = '*[_type == "works"] | order(_createdAt asc)';
 
     client.fetch(query).then((data) => {
       setWorks(data);
       setFilterWork(data);
+      console.log("HERE", data);
     });
   }, []);
 
@@ -42,19 +43,17 @@ const Work = () => {
       </h2>
       <div className="app__work-filter">
         <div className="app__work-filter">
-          {["Web Apps", "Mobile Apps", "Games", "All"].map(
-            (item, index) => (
-              <div
-                key={index}
-                onClick={() => handleWorkFilter(item)}
-                className={`app__work-filter-item app__flex p-text ${
-                  activeFilter === item ? "item-active" : ""
-                }`}
-              >
-                {item}
-              </div>
-            )
-          )}
+          {["Web Apps", "Mobile Apps", "Games", "All"].map((item, index) => (
+            <div
+              key={index}
+              onClick={() => handleWorkFilter(item)}
+              className={`app__work-filter-item app__flex p-text ${
+                activeFilter === item ? "item-active" : ""
+              }`}
+            >
+              {item}
+            </div>
+          ))}
         </div>
       </div>
 
@@ -117,7 +116,7 @@ const Work = () => {
 };
 
 export default AppWrap(
-  MotionWrap(Work, 'app__works'),
-  'work',
-  'app__primarybg',
+  MotionWrap(Work, "app__works"),
+  "work",
+  "app__primarybg"
 );
