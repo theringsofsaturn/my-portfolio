@@ -5,7 +5,7 @@ import {
   BsFacebook,
   BsGithub,
 } from "react-icons/bs";
-import { FaGoodreads } from "react-icons/fa";
+import { FaGoodreads, FaGooglePay } from "react-icons/fa";
 
 const SocialMedia = () => (
   <div className="app__social">
@@ -17,6 +17,14 @@ const SocialMedia = () => (
     <div>
       <a href="https://www.linkedin.com/in/emilian-kasemi/" target="_blank">
         <BsLinkedin />
+      </a>
+    </div>
+    <div>
+      <a
+        href="https://play.google.com/store/apps/dev?id=6201646843189478498"
+        target="_blank"
+      >
+        <FaGooglePay />
       </a>
     </div>
     <div>
